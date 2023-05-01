@@ -1,0 +1,17 @@
+1-  10.MOV BX, OFFSET OSO
+    12.MOV AL, [BX]
+
+
+2-  Se debe modificar el registro IMR con el valor 0FEH (11111101b) y se debe modificar el registro INT 1 con el valor 
+    10.
+
+3-  Habra un pedido de interrupción y se solicitara pasado un segundo del comienzo del programa.
+
+4-  MOV AL, 0
+    OUT CB, AL
+    MOV AL, 11110111b
+    OUT PB, AL
+
+5-  MOV AL, 0FFH
+    CMP AL, 10000001B
+    MOV AL, OFFSET FIN - OFFSET MSJ
