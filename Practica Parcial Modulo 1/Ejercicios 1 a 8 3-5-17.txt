@@ -1,0 +1,39 @@
+1-  ORG 1000H
+    DATO1 DB 100
+    DATO2 DB 200
+    RESULT DW ?
+
+    ORG 2000H
+    MOV AX, OFFSET DATO1
+    MOV CX, OFFSET DATO2
+    MOV DX, OFFSET DATO3
+    CALL CALCULO 
+    END
+
+
+2-  ORG 2000H
+    PUSH AX
+    PUSH BX
+    PUSH CX
+    POP AX
+    POP CX
+    POP BX
+    END
+
+3-  El registro ISR indica que se esta atendiendo la interrupcion mapeada en el BIT 1, osea el timer.
+    El registro IRR indica que la instruccion mapeada en el BIT 0 (F10), esta solicitando interrumpir.
+
+4-  La desventaja que presenta la tecnica de polling es que la CPU se encarga de consultar el estado de la 
+    impresora y mientras esto sucede no se dedica a hacer ninguna otra cosa, en cambio la tecnica mediante 
+    interrupciones permite a la CPU seguir operando con otras tareas y cuando la impresora este lista, el 
+    hand-shake mande una interrupcion al PIC.
+
+5-  La instrucción PUSH CL es incorrecta y tambien la instruccion MOV [CX], AL.
+
+6-  RF = 1100H RD= 1200H CONT= 100 CTRL= 02H
+
+7-  El programa activa los leds dependiendo del estado de la barra de pulsadores, donde cada pulsador mapea a un 
+    led que coincide en el bit que tienen asignado (El pulsador de BIT 0 mapea al LED de BIT 0).
+
+8-  No sucedera nada ya que no se configuro al PIC para que sea interrumpido por lo tanto todas las interrupciones 
+    estan enmascaradas. 
