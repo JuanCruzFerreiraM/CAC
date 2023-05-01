@@ -1,0 +1,14 @@
+A)-
+En la primera instruccion INT 7 el registro BX almacena el valor 1000H, que es la direccion de memoria del comienzo 
+de la cadena que se desea imprimir, el registro AL guarda el valor 18, que es la cantidad de caracteres de la cadena.
+En la segunda instruccion INT 7, el registro BX guarda el valor 1500H que es la direccion de memoria del numero ingre-
+sado, AL, guarda el valor 1, ya que esa es la cantidad de celdas de memoria que se deben imprimir.
+
+B)-
+En BX se alamcena la direccion de memoria de la variable NUM (1500h), la cual sera usada para guardar el valor que se lea
+por teclado.
+
+C)- 
+La segunda interrupcion INT 7 lo que hace es mostrar por consola el valor que se encuntra guardado en la direccion a la 
+que apunta BX, en este caso el valor de NUM que fue ingresado por teclado. En el registro CL queda almacenado el valor
+ingresado por teclado, el cual se encuentra guardado bajo la etiqueta NUM.
